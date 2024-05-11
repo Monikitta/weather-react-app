@@ -6,8 +6,6 @@ import './LeftContainer.scss'
 
 export default function LeftContainer({weather}) {
 
-  const currentDate = new Date();
-
     return (
       <div className="left-container">    
         <Logo />  

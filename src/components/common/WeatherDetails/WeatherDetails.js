@@ -25,7 +25,7 @@ export default function WeatherDetails({weather}) {
           <p className="small-text">Temp min</p>
           <div className="degree-img">
             <p className="info-style" id="tempMin">{weather.min.toFixed()}°</p>
-            <img className="weather-images" src={tempMin} alt="weather" />
+            <img className="weather-images" src={tempMin} alt="weather" />  
           </div>
         </div>
         <div className="weather-info">
