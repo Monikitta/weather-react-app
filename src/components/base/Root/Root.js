@@ -1,6 +1,7 @@
 import React from "react";
 import LeftContainer from "../LeftContainer"
 import RightContainer from "../RightContainer";
+import axios from 'axios';
 import './Root.scss';
 
 export default function Root() {
