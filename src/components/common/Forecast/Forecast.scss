@@ -5,31 +5,38 @@
 
 .weather-forecast {
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
   .forecast {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
   }
   
   .forecast-info {
    display: flex;
    justify-content: space-between;
-   gap: 10px;
+   gap: 2rem;
   }
   
   .forecast-time {
     display: flex;
     flex-direction: column;
-    margin-left: 4rem;
-
+    justify-content: center;
   }
   
-  
   .forecast-degree {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-weight: 400;
     font-size: 24px;
     line-height: 28.13px;
     color: rgba(255, 255, 255, 0.7);
+  }
+
+  .forecast-icon {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
   }

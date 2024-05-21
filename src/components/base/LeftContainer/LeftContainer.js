@@ -8,11 +8,12 @@ export default function LeftContainer({weather}) {
 
   const currentDate = new Date();
   
+  
     return (
       <div className="left-container">    
         <Logo />  
-        <HiddenContainer />  
-        <CityInfo weather={weather} currentDate={currentDate}/>
+        <HiddenContainer />
+        <CityInfo currentDate={currentDate}/>
       </div> 
 
     )

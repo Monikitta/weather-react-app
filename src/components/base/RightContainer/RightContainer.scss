@@ -2,6 +2,8 @@
      display: flex;
      flex-direction: column;
      background: rgba(0, 0, 0, 0.25);
+     overflow-y: auto;
+     max-height: 100vh;
      backdrop-filter: blur(9px);
      width: 29%;
      border-left-width: 5px;

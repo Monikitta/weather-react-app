@@ -15,7 +15,6 @@
 
 input[type="text"] {
     font-size: 20px;
-    font-weight: bold;
     line-height: 24.44px;
     color:rgba(255, 255, 255, 0.7);
     outline: none;
@@ -30,7 +29,13 @@ input[type="text"] {
     -webkit-text-stroke: 1px #000000;
 }
 
-img {
+.search-button {
+    width: 1.7rem;
+    height: 1.7rem;
     position: absolute;
+    background-image: url('../../../assets/fa_search.svg'); 
+    background-size: cover; 
+    border: none;
+    background-color: transparent;
     cursor: pointer;
 }

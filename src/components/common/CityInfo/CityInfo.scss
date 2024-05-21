@@ -1,42 +1,43 @@
 .info-block-container {
-    width: 60%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-left: 7.2rem;
-    margin-bottom: 72px;
-   
-  }
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-left: 7.2rem;
+  margin-bottom: 72px;
+}
 
-  .info-left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-  }
-  
-  .degree {
-    font-size: 9rem;
-    padding-left: 1rem;
-    margin: 0px;
-    margin-right: 5px;
-    letter-spacing: -10px;
-    width: 40%;
-  }
-  
-  .town-date {
-    margin-right: 5px;
-    width: 45%;
-    height: 100%;
-  }
-  .town {
-    margin: 0px;
-    font-size: 60px;
-  }
+.info-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
 
-  .image {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    margin-right: 29px;
-  }
+.degree {
+  font-size: 9rem;
+  padding-left: 1rem;
+  margin: 0px;
+  margin-right: 5px;
+  letter-spacing: -6px;
+  width: 40%;
+}
+
+.town-date {
+  margin-right: 5px;
+  height: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis; 
+  max-width: none;
+}
+
+.town {
+  font-size: 60px;
+}
+
+.img {
+  position: relative;
+  margin-right: 29px;
+  max-width: 100%;
+  height: auto;
+}
