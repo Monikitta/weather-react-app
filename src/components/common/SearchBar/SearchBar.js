@@ -6,7 +6,7 @@ import "./SearchBar.scss";
 
 export default function SearchBar() {
   const [input, setInput] = useState('');
-  const { setWeather } = useContext(WeatherContext);
+  const { setWeather, addToHistory  } = useContext(WeatherContext);
   const API_KEY = "12b1eb481bae9424d0d8f352708b1f64";
 
   const handleInputChange = (e) => {
@@ -37,6 +37,8 @@ export default function SearchBar() {
         icon: `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`,
         forecast: forecastData
       });
+      
+      addToHistory(name);
       setInput('');
     } catch (error) {
       console.error("Error fetching weather data", error);

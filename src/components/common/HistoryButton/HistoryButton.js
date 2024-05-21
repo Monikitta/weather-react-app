@@ -3,12 +3,12 @@ import './HistoryButton.scss';
 import { WeatherContext } from "../../../Context";
 
 
-export default function HistoryButton(params) {
+export default function HistoryButton() {
     const { toggleHistory } = useContext(WeatherContext);
 
     return (
         <div>
-            <button className="history-button" onClick={toggleHistory}>Weather History</button>
+            <button className="history-button" onClick={toggleHistory}>Search History</button>
         </div> 
     )
 }
