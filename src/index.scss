@@ -1,37 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-  //box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    background: url("./assets/snow.png") no-repeat center center;
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    bottom: 0;  
-    z-index: -1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  background: url("./assets/snow.png") no-repeat center center / cover;
+  //position: relative;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: filter 0.3s ease;
+
+  &.blurred {
+    filter: blur(100px);
+    background-color: rgba(0, 0, 0, 0.5);
   }
-
- 
-
-
-    
+}
 
 
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("./assets/thunderstom-image.jpg");
+  }
+}
 
 
-
-
-
-
-
+@media screen and (max-width: 426px) {
+  body {
+    background-image: url("./assets/rainy-image.png");
+  }
+}

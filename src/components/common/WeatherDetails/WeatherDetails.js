@@ -13,7 +13,7 @@ export default function WeatherDetails() {
   return (
     <div className="main-weather">
       <p className="weather-details">Weather Details...</p>
-
+ 
       <div className="weather-container">
         <p className="large-text">{weather.description}</p>
         <div className="weather-info">

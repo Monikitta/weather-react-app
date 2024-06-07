@@ -28,6 +28,7 @@ export const WeatherProvider = ({ children }) => {
   });
 
   const [showHistory, setShowHistory] = useState(false);
+  const [isBlurred, setIsBlurred] = useState(false);  //
 
   const initialHistory = useMemo(() => {
     const savedHistory = localStorage.getItem('searchHistory');
@@ -49,6 +50,7 @@ export const WeatherProvider = ({ children }) => {
 
   const toggleHistory = useCallback(() => {
     setShowHistory(prev => !prev);
+    setIsBlurred(prev => !prev);  //
   }, []);
 
   const addToHistory = useCallback((city) => {
@@ -63,7 +65,7 @@ export const WeatherProvider = ({ children }) => {
   }, []);
 
   return (
-    <WeatherContext.Provider value={{ weather, setWeather, showHistory, toggleHistory, history, addToHistory, clearHistory }}>
+    <WeatherContext.Provider value={{ weather, setWeather, showHistory, toggleHistory, history, addToHistory, clearHistory, isBlurred  }}>
       {children}
     </WeatherContext.Provider>
   );

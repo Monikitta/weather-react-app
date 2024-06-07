@@ -1,10 +1,43 @@
 
-  //background-image: ("../../../assets/snow.png") no-repeat center center/cover;
- 
-  .mainContainer {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
+.rootContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  display: none;
+  pointer-events: none;
+}
+
+.overlay.visible {
+  display: block;
+}
+
+.mainContainer {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  transition: filter 0.3s ease, background-color 0.3s ease; //
+
+  &.blurred {
+    filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.60);
+    pointer-events: none; // Prevent interaction with blurred content
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -31,7 +31,7 @@ export default function CityInfo( ) {
             <p className="town" id="town">{weather.city}</p>
             <p className="date">{currentDate}</p>
           </div>
-          {weather.icon && <img src={weather.icon} alt="Weather icon" />}
+          {weather.icon && <img src={weather.icon} alt="Weather icon" />} 
       </div>
     </div> 
     )

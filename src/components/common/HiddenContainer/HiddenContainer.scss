@@ -4,15 +4,26 @@
   position: absolute;
   overflow-y: auto;
   height: 100vh;
-  width: 20vw;
+  width: 30vw; 
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.10);
   backdrop-filter: blur(9px);
   color: #f1f1f1;
   border-right-width: 5px;
   border-right-color: rgba(255, 255, 255, 0.14);
   border-right-style: solid;
+  z-index: 11;
+
+  @media (max-width: 1024px) {
+    width: 50vw;
+    position: fixed;
+ }
+
+ @media (max-width: 426px) {
+  width: 100vw;
+  position: fixed;
+}
 }
 
 h2 {
@@ -41,7 +52,7 @@ h2 {
   top: 5px;
   right: 5px;
   background-color: rgba(0, 0, 0, 0.25);
-  color: white;
+  color: darkgrey;
   border-color: darkgrey;
   cursor: pointer;
 }
@@ -60,6 +71,7 @@ h2 {
 
 .clear-history-btn {
   margin: 1,2rem 0;
+  margin-bottom: 2rem;
   width: 60%;
   padding: 10px 20px;
   border-radius: 25px;

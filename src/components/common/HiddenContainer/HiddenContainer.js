@@ -12,9 +12,9 @@ export default function HiddenContainer() {
                 <button type="button" className="close-btn" onClick={toggleHistory}>
                     X
                 </button>
-                <h2>Weather History :</h2>
+                <h2>Searched Locations:</h2>
                 <ul id="output" className="cities">
-                    {history.map((city, index) => (
+                    {history.map((city, index) => ( 
                         <li key={index}>{city}</li>
                     ))}
                 </ul>

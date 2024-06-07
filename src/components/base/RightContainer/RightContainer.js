@@ -6,13 +6,15 @@ import Forecast from '../../common/Forecast';
 import './RightContainer.scss';
 
 export default function RightContainer() {
-    
+
     return (
-        <div className="right-container">  
+        <div className="right-container">
+            <div className='show-on-desktop'>
                 <SearchBar />
                 <HistoryButton />
-                <WeatherDetails />
-                <Forecast />
+            </div>  
+            <WeatherDetails />
+            <Forecast />
         </div>
     )
 
