@@ -8,9 +8,8 @@ export default function Forecast() {
 
   const formatTime = (timestamp) => {
     const date = new Date(timestamp * 1000);
-    const hours = date.getHours();
+    const hours = date.getHours(); 
     const minutes = date.getMinutes();
-
     const formattedHours = hours < 10 ? `0${hours}` : hours;
     const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
 
@@ -49,4 +48,3 @@ export default function Forecast() {
   )
 }
 
-/* src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} */

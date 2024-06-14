@@ -9,12 +9,13 @@
   @media (max-width: 768px) {
     margin-left: 1rem;
     width: 75%;
+    margin-bottom: 2.8rem;
   }
-
 
   @media (max-width: 426px) {
     margin-left: 1rem;
     width: 70%;
+    margin-bottom: 2rem;
   }
 }
 
@@ -24,10 +25,9 @@
   justify-content: flex-start;
   width: 100%;
 
-
   @media (max-width: 768px) {
-    width: 85%;
-    margin-right: 5rem;
+    width: 100%;
+    margin-left: 3rem;
   }
 
   @media (max-width: 426px) {
@@ -37,70 +37,84 @@
 }
 
 .degree {
-  font-size: 9rem;
+  font-size: 9vw;
   padding-left: 1rem;
   margin: 0px;
   margin-right: 5px;
-  letter-spacing: -6px;
-  width: 40%;
-
+  letter-spacing: -0.3vw; 
+  width: auto; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
   @media (max-width: 768px) {
-    font-size: 7.5rem;
+    font-size: 19vw;
+    letter-spacing: -1.3vw;
+    margin-right: 12px;
   }
 
   @media (max-width: 426px) {
-    font-size: 4rem;
+    font-size: 17vw;
+    letter-spacing: -0.3vw;
   }
-
 }
 
 .town-date {
   margin-right: 5px;
-  height: 100%;
-  font-size: 1.12rem;
+  font-size: 1.5vw; 
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: none;
 
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 1.2vw; 
   }
 
   @media (max-width: 426px) {
-    font-size: 0.62rem;
+    font-size: 1vw; 
   }
 }
 
 .town {
-  font-size: 3.75rem;
+  font-size: 4vw; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 8vw 
   }
 
   @media (max-width: 426px) {
-    font-size: 1.87rem;
+    font-size: 7vw; 
   }
-
 }
 
-.info-left img {
-  //position: relative;
-  margin-right: 29px;
-  max-width: 100%;
-  width: 70px;
-  height: 70px;
-  //height: auto;
+.date {
+  font-size: 1.5vw;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
   @media (max-width: 768px) {
-    width: 55px;
-    height: 55px;
+    font-size: 2.4vw;
   }
 
   @media (max-width: 426px) {
-    width: 40px;
-    height: 40px;
+    font-size: 2.3vw;
+  }
+}
+
+.img-icon {
+  margin-right: 1.5vw; 
+  display: inline-block;
+  width:140px;
+  height: 140px;
+  object-fit: contain;
+
+  @media (max-width: 768px) { 
+    width: 120px;
+    height: 120px;
+  }
+
+  @media (max-width: 426px) {
+    width: 80px;
+    height: 80px;
   }
 }

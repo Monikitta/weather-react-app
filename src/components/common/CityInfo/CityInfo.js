@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import { WeatherContext } from "../../../Context";
 import './CityInfo.scss';
-//import cloudy from "../../../assets/Cloudy.svg";
+import cloudy from "../../../assets/Cloudy.svg";
 
-export default function CityInfo( ) {
+export default function CityInfo() {
   const { weather } = useContext(WeatherContext);
 
   function getDate() {
@@ -11,7 +11,7 @@ export default function CityInfo( ) {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     const today = new Date();
-    const month = today.toLocaleString('default', { month: 'short' })  
+    const month = today.toLocaleString('default', { month: 'short' })
     const year = today.getFullYear() % 100;
     const date = today.getDate();
     const hour = today.getHours();
@@ -20,21 +20,25 @@ export default function CityInfo( ) {
 
     return `${hour}:${minutes} - ${day}, ${date} ${month} '${year}`;
   }
-  
+
   const [currentDate] = useState(getDate());
 
-    return (
+  return (
     <div className="info-block-container">
-        <div className="info-left">
-          <p className="degree" id="degree">{typeof weather.temp === 'number' ? weather.temp.toFixed() : weather.temp}°</p>
-          <div className="town-date">
-            <p className="town" id="town">{weather.city}</p>
-            <p className="date">{currentDate}</p>
-          </div>
-          {weather.icon && <img src={weather.icon} alt="Weather icon" />} 
+      <div className="info-left">
+        <p className="degree" id="degree">{typeof weather.temp === 'number' ? weather.temp.toFixed() : weather.temp}°</p>
+        <div className="town-date">
+          <p className="town" id="town">{weather.city}</p>
+          <p className="date">{currentDate}</p>
+        </div>
+        <img
+          src={weather.icon === cloudy ? cloudy : weather.icon}
+          alt="Weather icon"
+          className="img-icon"
+        />
       </div>
-    </div> 
-    )
+    </div>
+  )
 }
 
-/* <img className="image" src={cloudy} id="large-icon" alt="weather-icon"/> */
+/*  {weather.icon && <img src={weather.icon} alt="Weather icon" className="img-icon"/>}  */

@@ -6,6 +6,15 @@
 .weather-forecast {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    font-size: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 426px) {
+      font-size: 18px;
+    }
 }
 
   .forecast {
@@ -33,6 +42,7 @@
     font-size: 24px;
     line-height: 28.13px;
     color: rgba(255, 255, 255, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
 
   .forecast-icon {
