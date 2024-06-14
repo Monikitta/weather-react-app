@@ -1,51 +1,93 @@
 .main-weather {
-    margin-top: 3rem;
-    height: 400px;
-    border-bottom-color: rgba(255, 255, 255, 1);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+  margin-top: 3rem;
+  height: 400px;
+  border-bottom-color: rgba(255, 255, 255, 1);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 4rem;
 }
 
 .weather-container {
-    margin-top: 2rem;
+  margin-top: 2rem;
+}
+
+.weather-details {
+  font-size: 20px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  @media (max-width: 426px) {
+    font-size: 18px;
+  }
 }
 
 .large-text {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21.09px;
-    color: rgba(255, 255, 255, 1);
-    margin-top: 52px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.09px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 52px;
+
+  @media (max-width: 768px) {
+    text-align: center;
   }
-  
-  .weather-info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.5rem;
+
+  @media (max-width: 426px) {
+    text-align: center;
+    font-size: 16px;
   }
-  
-  .small-text {
-    font-weight: 400;
-    size: 18px;
-    line-height: 21.09px;
-    color: rgba(255, 255, 255, 0.7);
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.small-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.09px;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
-  
-  .info-style {
-    font-weight: 400;
-    size: 18px;
-    line-height: 21.09px;
-    color: rgba(255, 255, 255, 1);
+
+  @media (max-width: 426px) {
+    font-size: 16px;
   }
-  
-  .degree-img {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+}
+
+.info-style {
+  font-weight: 400;
+  size: 18px;
+  line-height: 21.09px;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
-  
-  .weather-images {
-    height: 26px;
-    position: relative;
-    width: 20px;
+
+  @media (max-width: 426px) {
+    font-size: 16px;
   }
+}
+
+.degree-img {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.weather-images {
+  height: 26px;
+  position: relative;
+  width: 20px;
+}

@@ -1,35 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-  //box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    background: url("./assets/snow.png") no-repeat center center;
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    bottom: 0;  
-    z-index: -1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  background: url("./assets/snow.png") no-repeat center center / cover;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  //transition: filter 0.1s linear;
+
+  &.warm-weather {
+    background: url("./assets/tree.jpg") no-repeat center center / cover;
   }
 
+  &.default-weather {
+    background: url("./assets/snow.png") no-repeat center center / cover;
+  }
 
-    
+  @media (max-width: 426px) {
+    &.warm-weather-mobile {
+      background: url("./assets/sunny.png") no-repeat center center / cover;
+    }
 
+    &.default-weather-mobile {
+      background: url("./assets/rainy-image.png") no-repeat center center / cover;
+    }
+  }
 
+  @media (max-width: 768px) {
+    &.warm-weather-tablet {
+      background: url("./assets/sunny.png") no-repeat center center / cover;
+    }
 
+    &.default-weather-tablet {
+      background: url("./assets/thunderstom-image.jpg") no-repeat center center / cover;
+    }
+  }
 
-
-
-
-
-
+  &.blurred {
+    filter: blur(100px);
+    background-color: rgba(0, 0, 0, 0.50);
+  }
+}

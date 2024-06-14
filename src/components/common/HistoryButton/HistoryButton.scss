@@ -1,10 +1,23 @@
 .history-button {
-    width:40%;
+    width:60%;
+    height: 3vh;
     margin-top: 1rem;
     border-radius: 25px;
     border-color: darkgrey;
     font-size: 1.1rem;
     background-color: rgba(255, 255, 255, 0);
-    color: darkgrey;
+    color: whitesmoke;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+        height: 4vh;
+        color: whitesmoke;
+        font-size: 50px;
+        font-weight: 700;
+      }
+
+      @media (max-width: 426px) {
+        color: whitesmoke;
+        height: 3vh;
+      }
 }
