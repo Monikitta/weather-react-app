@@ -5,14 +5,17 @@ import WeatherDetails from '../../common/WeatherDetails';
 import Forecast from '../../common/Forecast';
 import './RightContainer.scss';
 
-export default function RightContainer({weather}) {
+export default function RightContainer() {
+
     return (
-        <div class="right-container">
-            <SearchBar />
-            <HistoryButton />
-            <WeatherDetails weather={weather}/>
-            <Forecast weather={weather} />
+        <div className="right-container">
+            <div className='show-on-desktop'>
+                <SearchBar />
+                <HistoryButton />
+            </div>  
+            <WeatherDetails />
+            <Forecast />
         </div>
     )
-    
+
 }

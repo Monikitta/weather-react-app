@@ -1,27 +1,48 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import LeftContainer from "../LeftContainer"
 import RightContainer from "../RightContainer";
+import HiddenContainer from "../../common/HiddenContainer/"; 
+import { WeatherContext } from "../../../Context"; 
+import useBodyBlur from "../../../useBodyBlur";
+import ErrorMessage from "../../common/ErrorMessage";
 import './Root.scss';
 
 export default function Root() {
+  const { isBlurred, showHistory, bgClass, fetchWeather, toggleHistory  } = useContext(WeatherContext); 
+  useBodyBlur(isBlurred && !showHistory); 
 
-  const weather = {
-    name: 'Burgas',
-    temp: 20.97,
-    max: 23.06,
-    min: 20.97,
-    humadity: 70,
-    cloudy: 20,
-    wind: 3.6,
-    forecast: 'clouds'
+  useEffect(() => {
+    document.body.classList.remove(
+      'warm-weather', 'default-weather', 
+      'warm-weather-tablet', 'default-weather-tablet', 
+      'warm-weather-mobile', 'default-weather-mobile'
+    );
+    if (bgClass) {
+      document.body.classList.add(bgClass); 
+    }
+  }, [bgClass]);
+
+  useEffect(() => {
+ 
+    fetchWeather('La paz'); 
+  },[]); 
+
+  const handleOverlayClick = () => {  /// !
+    if (showHistory) {
+      toggleHistory();
+    }
   };
 
-    return  (
-        <div className="mainContainer">
-          <LeftContainer weather={weather} />
-          <RightContainer weather={weather} />
-        </div>
-    )
+  return (
+    <div className="rootContainer">
+      <HiddenContainer toggleHistory={toggleHistory}/>
+      <ErrorMessage />
+      <div className={`overlay ${isBlurred ? 'visible' : ''}`} onClick={handleOverlayClick}></div>
+      <div className={`mainContainer ${isBlurred ? 'blurred' : ''}`}>
+        <LeftContainer />
+        <RightContainer />
+      </div>
+    </div>
+  )
 }
-
 

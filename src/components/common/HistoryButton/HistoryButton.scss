@@ -1,10 +1,32 @@
+.history-button-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  @media (max-width: 426px) {
+    align-items: flex-end;
+  }
+}
+
 .history-button {
-    width:40%;
+    width:100%;
+    max-width: 200px;
     margin-top: 1rem;
+    height: 1.7rem;
+    padding: 0.1rem;
     border-radius: 25px;
     border-color: darkgrey;
     font-size: 1.1rem;
     background-color: rgba(255, 255, 255, 0);
-    color: darkgrey;
+    color: whitesmoke;
     cursor: pointer;
+    text-align: center;
+
+    @media (max-width: 960px) {
+        font-size: 0.8rem;  
+      }
+
+      @media (max-width: 426px) {
+        font-size: 0.8rem;
+      }
 }
