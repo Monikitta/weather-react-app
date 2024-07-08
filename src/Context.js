@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect, useCallback, useMemo } from 'react';
-//import cloudy from "./assets/Cloudy.svg";
 import axios from 'axios';
 
 export const WeatherContext = createContext();

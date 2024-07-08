@@ -4,10 +4,10 @@ import { WeatherContext } from "../../../Context";
 
 
 export default function HiddenContainer() {
-    const { showHistory, toggleHistory, history, clearHistory, fetchWeather  } = useContext(WeatherContext);
+    const { showHistory, toggleHistory, history, clearHistory, fetchWeather } = useContext(WeatherContext);
 
     const handleOverlayClick = (e) => {
-        if (e.target.classList.contains('history-container')) {
+        if (showHistory) {
             toggleHistory();
         }
     };
@@ -25,8 +25,8 @@ export default function HiddenContainer() {
                 </button>
                 <h2>Searched Locations:</h2>
                 <ul id="output" className="cities">
-                    {history.slice().reverse().map((city, index) => ( 
-                        <li key={index} onClick={() => handleCityClick(city)}>{city}</li>
+                    {history.slice().reverse().map((city, index) => (
+                        <li key={index} onClick={() => handleCityClick(city)} className="eachCity">{city}</li>
                     ))}
                 </ul>
                 <button className="clear-history-btn" onClick={clearHistory}>Clear History</button>

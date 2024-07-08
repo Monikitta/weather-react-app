@@ -8,7 +8,7 @@ import ErrorMessage from "../../common/ErrorMessage";
 import './Root.scss';
 
 export default function Root() {
-  const { isBlurred, showHistory, bgClass, fetchWeather } = useContext(WeatherContext); 
+  const { isBlurred, showHistory, bgClass, fetchWeather, toggleHistory  } = useContext(WeatherContext); 
   useBodyBlur(isBlurred && !showHistory); 
 
   useEffect(() => {
@@ -22,28 +22,22 @@ export default function Root() {
     }
   }, [bgClass]);
 
-  // const setDefaultBackground = () => {
-  //   if (window.matchMedia('(max-width: 426px)').matches) {
-  //     return 'default-weather-mobile';
-  //   } else if (window.matchMedia('(max-width: 768px)').matches) {
-  //     return 'default-weather-tablet';
-  //   } else {
-  //     return 'default-weather';
-  //   }
-  // };
-
-  // Set default background image when component mounts
   useEffect(() => {
-    //const defaultBgClass = setDefaultBackground();
-    //document.body.classList.add(defaultBgClass);
-    fetchWeather('La paz'); // Fetch weather data to determine dynamic background
-  },[]); // Run only on component mount
+ 
+    fetchWeather('La paz'); 
+  },[]); 
+
+  const handleOverlayClick = () => {  /// !
+    if (showHistory) {
+      toggleHistory();
+    }
+  };
 
   return (
     <div className="rootContainer">
-      <HiddenContainer />
+      <HiddenContainer toggleHistory={toggleHistory}/>
       <ErrorMessage />
-      <div className={`overlay ${isBlurred ? 'visible' : ''}`}></div>
+      <div className={`overlay ${isBlurred ? 'visible' : ''}`} onClick={handleOverlayClick}></div>
       <div className={`mainContainer ${isBlurred ? 'blurred' : ''}`}>
         <LeftContainer />
         <RightContainer />
@@ -52,34 +46,3 @@ export default function Root() {
   )
 }
 
-/*
- 
-  return (
-    <div className="mainContainer">
-        <LeftContainer />
-        <RightContainer  />    
-    </div>
-  )
-*/
-//-----
-
-/*
-const setDefaultBackground = () => {
-    if (window.matchMedia('(max-width: 426px)').matches) {
-      return 'default-weather-mobile';
-    } else if (window.matchMedia('(max-width: 768px)').matches) {
-      return 'default-weather-tablet';
-    } else {
-      return 'default-weather';
-    }
-  };
-
-  // Set default background image when component mounts
-  useEffect(() => {
-    const defaultBgClass = setDefaultBackground();
-    document.body.classList.add(defaultBgClass);
-    fetchWeather(''); // Fetch weather data to determine dynamic background
-  },[]); // Run only on component mount
-
-
-*/

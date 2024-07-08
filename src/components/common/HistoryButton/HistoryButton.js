@@ -12,9 +12,9 @@
         };
         
         return (
-            <div>
+            <div className="history-button-container">
                 <button className="history-button" onClick={handleToggleHistory} >Search History</button> 
             </div> 
-        )
+        ) 
     }
 

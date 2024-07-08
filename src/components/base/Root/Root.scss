@@ -27,6 +27,7 @@
 
 .overlay.visible {
   display: block;
+  pointer-events: all; 
 }
 
 .mainContainer {

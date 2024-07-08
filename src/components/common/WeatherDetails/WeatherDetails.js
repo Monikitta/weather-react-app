@@ -6,9 +6,9 @@ import tempMin from "../../../assets/temp-min.svg";
 import humadity from "../../../assets/humadity.svg";
 import smallCloudy from "../../../assets/small-cloudy.svg";
 import wind from "../../../assets/wind.svg";
-
+ 
 export default function WeatherDetails() {
-  const { weather } = useContext(WeatherContext);
+  const { weather } = useContext(WeatherContext); 
  
   return (
     <div className="main-weather">
@@ -16,14 +16,14 @@ export default function WeatherDetails() {
  
       <div className="weather-container">
         <p className="large-text">{weather.description}</p>
-        <div className="weather-info">
+        <div className="weather-info"> 
           <p className="small-text">Temp max</p>
           <div className="degree-img">
             <p className="info-style" id="tempMax">{typeof weather.temp === 'number' ? weather.temp_max.toFixed() : weather.temp_max}°</p>
             <img className="weather-images" src={tempMax} alt="weather" />
           </div>
         </div>
-        <div className="weather-info">
+        <div className="weather-info"> 
           <p className="small-text">Temp min</p> 
           <div className="degree-img">
             <p className="info-style" id="tempMin">{typeof weather.temp === 'number' ? weather.temp_min.toFixed() : weather.temp_min}°</p>

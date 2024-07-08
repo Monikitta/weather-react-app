@@ -64,7 +64,7 @@ export default function SearchBar() {
         } else if (isTablet) {
           setBgClass('default-weather-tablet');
         } else {
-          setBgClass('default-weather');  
+          setBgClass('default-weather');
         }
       }
     } catch (error) {

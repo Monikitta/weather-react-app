@@ -41,4 +41,3 @@ export default function CityInfo() {
   )
 }
 
-/*  {weather.icon && <img src={weather.icon} alt="Weather icon" className="img-icon"/>}  */

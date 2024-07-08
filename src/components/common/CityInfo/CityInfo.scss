@@ -6,6 +6,11 @@
   margin-left: 7.2rem;
   margin-bottom: 72px;
 
+  @media (max-width: 968px) {
+    margin-left: 3.5rem;
+    
+  }
+
   @media (max-width: 768px) {
     margin-left: 1rem;
     width: 75%;
@@ -16,7 +21,7 @@
     margin-left: 1rem;
     width: 70%;
     margin-bottom: 2rem;
-  }
+  } 
 }
 
 .info-left {
@@ -27,7 +32,7 @@
 
   @media (max-width: 768px) {
     width: 100%;
-    margin-left: 3rem;
+    padding-left: 2rem;
   }
 
   @media (max-width: 426px) {
@@ -38,7 +43,6 @@
 
 .degree {
   font-size: 9vw;
-  padding-left: 1rem;
   margin: 0px;
   margin-right: 5px;
   letter-spacing: -0.3vw; 
@@ -46,9 +50,13 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
   @media (max-width: 768px) {
-    font-size: 19vw;
+    font-size: 120px;
     letter-spacing: -1.3vw;
     margin-right: 12px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 80px;  
   }
 
   @media (max-width: 426px) {
@@ -88,16 +96,16 @@
 }
 
 .date {
-  font-size: 1.5vw;
+  font-size: 18px;
   font-weight: 400;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
   @media (max-width: 768px) {
-    font-size: 2.4vw;
+    font-size: 16px;
   }
 
   @media (max-width: 426px) {
-    font-size: 2.3vw;
+    font-size: 10px;
   }
 }
 
@@ -108,13 +116,18 @@
   height: 140px;
   object-fit: contain;
 
+  @media (max-width: 900px) {
+    width: 110px;
+    height: 110px;
+  }
+
   @media (max-width: 768px) { 
-    width: 120px;
-    height: 120px;
+    width: 15vw; 
+    height: 15vw; 
   }
 
   @media (max-width: 426px) {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 }
