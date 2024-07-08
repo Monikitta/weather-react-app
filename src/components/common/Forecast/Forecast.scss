@@ -7,7 +7,6 @@
     flex-direction: column;
     align-items: center;
   }
-
 }
 
 .weather-forecast {
@@ -40,7 +39,12 @@
 
   @media (max-width: 375px) {
     width: 18rem;
+  }
 
+  @media (max-width: 330px) {
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
   }
 }
 
